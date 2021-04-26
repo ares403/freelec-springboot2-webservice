@@ -1,12 +1,12 @@
-package com.jojoldu.book.springboot.domain.service;
+package com.jojoldu.book.springboot.domain.customer;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface ServiceRepository extends JpaRepository<Service, Long>{
+public interface CustomerRepository extends JpaRepository<Customer, Long>{
 
     @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
-    List<Service> findAllDesc();
+    List<Customer> findAllDesc();
 }
